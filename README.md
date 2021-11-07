@@ -16,7 +16,7 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-#### copy mode : vim ####
+# copy mode : vim 
 
 # set vi mode for copy mode
 setw -g mode-keys vi
