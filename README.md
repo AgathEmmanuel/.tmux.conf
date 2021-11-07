@@ -1,6 +1,6 @@
 # .tmux.conf
 
-# remap  prefix to Alt + a
+# remap  prefix Ctrl+B to Alt + a
 set -g prefix M-a
 unbind C-b
 bind M-a send-prefix
