@@ -89,7 +89,33 @@ Esc 		clear selection
 y 		copy section  
 p 		paste selection  
   
+ 
+
+
+Is there a tmux shortcut to create a new session?  
   
+There are no predefined shortcuts, the only native way to do it is :  
+  
+    Create session: tmux new -s session_name  
+  
+    Ctrl-B + d to detach  
+  
+    Return to your session: tmux attach-session -t session_name  
+  
+You can use tmux kill-server to cleanly and gracefully kill all tmux open sessions (and server).  
+  
+If you are inside a tmux session you would like to keep, use 
+
+    tmux kill-session -a to close all other sessions.  
+  
+To close a specific session, use 
+
+    tmux list-sessions to identify the session you want to kill, and then use 
+    tmux kill-session -t targetSession to kill that specific session.  
+  
+Also you can grossly kill all tmux processes with 
+    pkill -f tmux.  
+ 
 
 
 
