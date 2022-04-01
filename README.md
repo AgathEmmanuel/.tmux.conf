@@ -24,3 +24,79 @@ setw -g mode-keys vi
 bind-key -T copy-mode-vi 'v' send -X begin-selection
 # Setup 'y' to copy selection
 bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+
+
+
+
+## Commands
+
+
+Command 	Description  
+tmux 	start tmux  
+tmux new -s <name> 	start tmux with <name>  
+tmux ls 	shows the list of sessions  
+tmux a # 	attach the detached-session  
+tmux a -t <name> 	attach the detached-session to <name>  
+tmux kill-session –t <name> 	kill the session <name>  
+tmux kill-server 	kill the tmux server  
+
+
+Press ‘ctrl-a’ and then type the commands from the below tables  
+
+? 	show the list of commands  
+r 	reload .tmux.conf file  
+s 	list sessions  
+$ 	rename sessions  
+d 	detach session  
+w 	list windows and select one  
+, 	rename window  
+c or N 	create new window  
+n 	go to next window  
+p 	go to previous window  
+f 	find window  
+& 	kill window  
+0-9 	go to window 0-9  
+% 	vertical split  
+" 	horizontal split  
+x 	kill pane  
+o 	go to next pane  
+
+h, j, k, l 	go to next pane in vim-style  
+z 		toggle full-screen mode for current pane  
+arrow keys 	resize the pane  
+q 		show pane-numbers  
+: 		go to command mode  
+list-keys 	shows all the commands  
+list-panes 	shows the names of all panes  
+
+resize-pane -D 20 	resize down  
+resize-pane -U 20 	resize up  
+resize-pane -L 20 	resize left  
+resize-pane -R 20 	resize right  
+swap-pane -s 3 -t 1 	swap pane '1' with pane '3'  
+Esc 			go to copy mode  
+q 			quit mode  
+j, k, l, h 	down, up, right left  
+J or K 		scroll down or up  
+F or B 		go to next or previous page  
+$ 		go to end of line  
+0 		go to beginning of line  
+w or b 		go to next or previous word  
+/ or ? 		search forward or backward  
+n 		search next (use after above commands)  
+space 		start selection  
+Esc 		clear selection  
+y 		copy section  
+p 		paste selection  
+  
+  
+
+
+
+## Links  
+
+
+[https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html](https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html)  
+
+
+
